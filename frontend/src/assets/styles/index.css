@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #ff6a00; /* Orange accent */
+  --color-accent: #f8f8f8;
+  --color-bg-light: #ffffff;
+  --color-text-light: #000000;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  
+  --font-main: 'Inter', sans-serif;
+  
+  --border-radius: 4px;
+  --transition: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  transition: var(--transition);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-main);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-bg-light) !important;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--color-primary) !important;
+}
+
+.nav-link {
+  color: var(--color-primary) !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  transition: var(--transition);
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  color: #fff !important;
+}
+
+.btn-light {
+  background-color: #f3f4f6;
+  border-color: #f3f4f6;
+  color: var(--color-primary);
+}
+
+/* Cards (Products) */
+.card {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  transition: var(--transition);
+}
+
+.card-img-container {
+  background-color: var(--color-accent);
+  padding: 2rem;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-img-container img {
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.badge-bestseller {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: var(--color-primary);
+}
+
+.card-text-muted {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-current {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.price-original {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  font-weight: 500;
+  border-radius: 0;
+  transition: opacity 0.2s;
+}
+
+.btn-add-to-cart:hover {
+  opacity: 0.8;
+}
+
+/* Variants */
+.variant-pills {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.variant-pill {
+  border: 1px solid var(--color-border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  background: white;
+  cursor: pointer;
+}
+
+.variant-pill.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* Ratings */
+.rating span {
+  margin: 0.1rem;
+}
+.rating svg {
+  color: var(--color-primary);
+}
+.rating-text {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+
+main {
+  min-height: 80vh;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+footer {
+  background-color: #f9fafb;
+  color: var(--color-text-muted);
+  padding: 3rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Top Banner */
+.top-banner {
+  background-color: var(--color-secondary);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
